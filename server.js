@@ -36,7 +36,6 @@ io.sockets.on('connection', (socket) => {
         ' - ' +
         Date().substr(3, 21),
     );
-    //connections.splice(connections.indexOf(socket),1);
     delete connections[socket];
     serverclients.splice(serverclients.indexOf(socket.handshake.address.substr(7)), 1);
     io.sockets.emit('clients', { serverclients });
@@ -52,7 +51,6 @@ io.sockets.on('connection', (socket) => {
     return data;
   }
   function readDataFile() {
-    //console.log('Request to read file.');
     oldDirTR = copyVar(rootDirTR);
     oldDir133 = copyVar(rootDir133);
     oldDir150 = copyVar(rootDir150);

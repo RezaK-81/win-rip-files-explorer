@@ -20,7 +20,6 @@ var difcount200 = 0;
 
 socket.on('printTR', (data) => {
   console.log('Updated ' + Date().substr(3, 21) + ' (' + data.cli + ')');
-  //console.log(data);
 
   var tempstr = '';
   for (var i = 0; i < data.dir.length; i++) {
@@ -57,8 +56,6 @@ socket.on('printTR', (data) => {
     difcount200 = data.dir.length;
   }
 
-  //console.log(Dir);
-  //console.log(tempstr);
   difcount = difcountTR + difcount133 + difcount150 + difcount200;
   window.document.title = '(' + difcount + ') WIN-RIP v1.0';
 
@@ -73,19 +70,17 @@ socket.on('printTR', (data) => {
 });
 
 socket.on('clients', (data) => {
-  //console.log(data.serverclients);
   var clienstdiv = document.getElementById('clients');
   var tempclients = '';
   for (var i = 0; i < data.serverclients.length; i++) {
     tempclients = tempclients + data.serverclients[i] + '<br>';
   }
-  //console.log(tempclients);
   var mydivclients = document.createElement('div');
   clienstdiv.innerHTML = null;
   mydivclients.innerHTML = tempclients;
   mydivclients.classList.add('clientsList');
   clienstdiv.append(mydivclients);
-}); // 'clients'
+}); 
 
 socket.on('connect', () => setStatus('ONLINE'));
 socket.on('disconnect', () => setStatus('OFFLINE'));

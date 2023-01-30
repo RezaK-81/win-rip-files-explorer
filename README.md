@@ -1,1 +1,3 @@
-# React shop for 1 products with order page
+# File explorer for WIN-RIP
+
+Get list of files from LAN folder.
