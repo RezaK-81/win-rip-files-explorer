@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>WIN-RIP v1.0</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>WIN-RIP v1.3</h1>
+      <p class="minotstup">Список файлов для фотовывода</p>
+      <span id="status" class="togreen">Соединение...</span>
+    </header>
+    <br />
+
+    <main>
+      <!--       !-->
+
+      <div class="container">
+        <div id="Dir">
+          <div class="row">
+            <div class="col-md-3 mybord nopad">
+              <div class="headDir">Trafaret <span id="colTR"></span></div>
+              <div id="rootDirTR" class="mylist">Загрузка...</div>
+            </div>
+            <div class="col-md-3 mybord nopad">
+              <div class="headDir">Flex133lpi <span id="col133"></span></div>
+              <div id="rootDir133" class="mylist">Загрузка...</div>
+            </div>
+            <div class="col-md-3 mybord nopad">
+              <div class="headDir">Flex150lpi <span id="col150"></span></div>
+              <div id="rootDir150" class="mylist">Загрузка...</div>
+            </div>
+            <div class="col-md-3 mybord nopad">
+              <div class="headDir">Offset200lpi <span id="col200"></span></div>
+              <div id="rootDir200" class="mylist">Загрузка...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- после таблицы  -->
+        <br />
+        <span>Список подключенных клиентов:</span>
+        <div id="clients"></div>
+      </div>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+
+    <style></style>
+  </body>
+</html>

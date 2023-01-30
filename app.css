@@ -1,0 +1,86 @@
+body {
+  background-color: #3c3b45;
+  color: #fff;
+  font-family: 'Consolas', monospace;
+}
+
+header {
+  text-align: center;
+}
+
+#messages {
+  margin-left: 1em;
+  list-style: none;
+}
+
+#form {
+  display: flex;
+}
+
+input,
+label {
+  display: block;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: black;
+  color: #fff;
+  padding: 1em 0.5em;
+  display: block;
+  font-size: 1.5em;
+  font-family: 'Consolas', monospace;
+  flex: 1;
+}
+
+label {
+  display: block;
+  padding: 1em 0.5em;
+  font-size: 1.5em;
+}
+
+.row {
+  text-align: center;
+}
+html {
+  padding-top: 20px;
+}
+.headDir {
+  background-color: lightgrey;
+  color: #3c3b45;
+  font-size: 20px;
+}
+.tored {
+  background-color: red;
+  color: #3c3b45;
+  box-shadow: 0 0 4px 3px #3c3b45, 0 0 4px 7px #0f0;
+}
+
+.togreen {
+  background-color: #0f0;
+  color: #3c3b45;
+  box-shadow: 0 0 4px 3px #3c3b45, 0 0 4px 7px red;
+}
+
+#status {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.mybord {
+  border: solid 1px #fff;
+}
+
+.mylist {
+  padding: 15px;
+}
+
+.minotstup {
+  margin-top: -20px;
+}
+
+.nopad {
+  padding: 0;
+}
